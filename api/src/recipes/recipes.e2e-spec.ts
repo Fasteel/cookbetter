@@ -30,8 +30,13 @@ describe('Recipes', () => {
       ingredients: [
         {
           label: 'Patate',
-          amount: 300,
-          unit: UnitsSeed.find((v) => v.label === 'l'),
+          amount: 650,
+          unit: UnitsSeed.find((v) => v.label === 'g'),
+        },
+        {
+          label: 'Beurre',
+          amount: 50,
+          unit: UnitsSeed.find((v) => v.label === 'g'),
         },
       ],
     };
@@ -44,9 +49,14 @@ describe('Recipes', () => {
     expect(res.body.id).toBeDefined();
     expect(res.body.label).toEqual('Purée');
     expect(res.body.ingredients[0].label).toEqual('Patate');
-    expect(res.body.ingredients[0].amount).toEqual(300);
+    expect(res.body.ingredients[0].amount).toEqual(650);
     expect(res.body.ingredients[0].unit).toEqual(
-      UnitsSeed.find((v) => v.label === 'l'),
+      UnitsSeed.find((v) => v.label === 'g'),
+    );
+    expect(res.body.ingredients[1].label).toEqual('Beurre');
+    expect(res.body.ingredients[1].amount).toEqual(50);
+    expect(res.body.ingredients[1].unit).toEqual(
+      UnitsSeed.find((v) => v.label === 'g'),
     );
   });
 
