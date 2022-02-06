@@ -4,7 +4,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Recipe {
   @PrimaryGeneratedColumn()
-  recipeId: number;
+  id: number;
 
   @Column()
   label: string;

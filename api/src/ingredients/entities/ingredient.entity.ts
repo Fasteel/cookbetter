@@ -5,7 +5,7 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Ingredient {
   @PrimaryGeneratedColumn()
-  ingredientId: number;
+  id: number;
 
   @Column()
   label: string;

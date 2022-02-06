@@ -1,6 +1,5 @@
 import { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
-import assert from 'assert';
 import { getTypeOrmConfig } from '../../config/ormconfig';
 import { UnitsSeed } from '../../migrations/seeds/unit';
 import * as request from 'supertest';
@@ -42,7 +41,7 @@ describe('Recipes', () => {
       .send(payload)
       .expect(201);
 
-    expect(res.body.recipeId).toBeDefined();
+    expect(res.body.id).toBeDefined();
     expect(res.body.label).toEqual('Purée');
     expect(res.body.ingredients[0].label).toEqual('Patate');
     expect(res.body.ingredients[0].amount).toEqual(300);
