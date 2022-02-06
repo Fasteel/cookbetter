@@ -5,6 +5,7 @@
   "username": "cookbetter",
   "password": "cookbetter",
   "database": "cookbetter",
-  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "entities": ["dist/src/**/*.entity{.ts,.js}"],
+  "migrations": ["dist/migrations/*{.ts,.js}"],
   "synchronize": true
 }
